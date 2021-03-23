@@ -1,0 +1,11 @@
+#homeText{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-left: 16%;
+    padding-right: 16%;
+}
+.line{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+}
