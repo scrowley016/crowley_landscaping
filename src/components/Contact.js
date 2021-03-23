@@ -12,12 +12,12 @@ const Contact =()=>{
             <div id="titleC">
             <br></br>
             <div>
-            <Image src="./pictures/email.png" width="200px" />
+            {/* <Image src="./pictures/email.png" width="200px" /> */}
             </div>
-                <h1> To contact us for a quote or questions</h1>
+                <h1> To Contact Us For a Quote or Questions Call Us At:</h1>
                 <br></br>
-                <h4>By Email: browneco@verizon.net</h4>
-                <a href="tel:5554280940">By Phone: (716) 667-0802</a>
+                {/* <h4>browneco@verizon.net</h4> */}
+                <a href="tel:7164272060" className="contact">(716) 427-2060</a>
                 <br></br>
                 <Image src="./pictures/bush.png" className="line"/>
                 <h1>Or we can contact you</h1>

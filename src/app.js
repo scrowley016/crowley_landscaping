@@ -22,9 +22,9 @@ import Contact from "./components/Contact"
                         <Route exact path="/home">
                             <Home />
                         </Route> 
-                        <Route exact path="/about">
+                        {/* <Route exact path="/about">
                             <About />
-                        </Route> 
+                        </Route>  */}
                         <Route exact path="/services">
                             <Services />
                         </Route> 
