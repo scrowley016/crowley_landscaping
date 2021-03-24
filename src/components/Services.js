@@ -9,9 +9,9 @@ const Services=()=>{
                         <h4>
                       
                         </h4>
-                        <Image src="./pictures/grass.png" className="line"/>
+                       
                         <h1>At Crowley Landscaping, we provide the following services for your yard:</h1>
-
+                        <Image src="./pictures/grass.png" className="line"/>
                     </div>
                     <div>
                         <br></br>
