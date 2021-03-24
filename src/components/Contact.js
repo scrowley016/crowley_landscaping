@@ -1,12 +1,22 @@
 import React, {useState} from 'react'
 import {Form, Button, Image} from 'react-bootstrap'
+import{ EmailJSResponseStatus, init, emailjs } from 'emailjs-com';
+init("user_J522WfnahnCpGMojJMqUm");
 
 
 const Contact =()=>{
   const [companyName, setCompanyName]= useState("")
+  const [name, setName]= useState("")
   const [email, setEmail]= useState("")
   const [phone, setPhone]= useState("")
   const [body, setBody] = useState("")
+
+  function handleSubmit(event){
+      event.preventDefault()
+      emailjs.sendForm("default_service","template_7haep6i","ContactForm")
+  }
+
+
     return (
         <div id="contact">
             <div id="titleC">
@@ -16,7 +26,7 @@ const Contact =()=>{
             </div>
                 <h1> To Contact Us For a Quote or Questions Call Us At:</h1>
                 <br></br>
-                {/* <h4>browneco@verizon.net</h4> */}
+                <h4>crowleylandscaping716@gmail.com</h4>
                 <a href="tel:7164272060" className="contact">(716) 427-2060</a>
                 <br></br>
                 <Image src="./pictures/bush.png" className="line"/>
@@ -25,10 +35,10 @@ const Contact =()=>{
 
         <div id="form">
     
-        <Form>
+        <Form id="ContactForm" onSubmit={()=>handleSubmit()}>
             <Form.Group controlId="formBasicEmail">
     <Form.Label>Contact Name</Form.Label>
-    <Form.Control type="email" placeholder="First and Last" onChange={(event)=> setName(event.target.value)} />
+    <Form.Control type="text" placeholder="First and Last" onChange={(event)=> setName(event.target.value)} />
   </Form.Group>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Company Name</Form.Label>
