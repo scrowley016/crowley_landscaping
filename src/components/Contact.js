@@ -21,15 +21,17 @@ const Contact =()=>{
         <div id="contact">
             <div id="titleC">
             <br></br>
-            <div>
+            {/* <div> */}
             {/* <Image src="./pictures/email.png" width="200px" /> */}
-            </div>
+            {/* </div> */}
                 <h1> To Contact Us For a Quote or Questions Call Us At:</h1>
                 <br></br>
                 <h4>crowleylandscaping716@gmail.com</h4>
                 <a href="tel:7164272060" className="contact">(716) 427-2060</a>
                 <br></br>
                 <Image src="./pictures/bush.png" className="line"/>
+                <br></br>
+                <br></br>
                 <h1>Or we can contact you</h1>
             </div>
 
