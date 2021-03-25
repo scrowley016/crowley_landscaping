@@ -1,19 +1,22 @@
 import React, {useState} from 'react'
 import {Form, Button, Image} from 'react-bootstrap'
-import{ EmailJSResponseStatus, init, emailjs } from 'emailjs-com';
+import{ EmailJSResponseStatus, init } from 'emailjs-com';
+import emailjs from 'emailjs-com';
+
 init("user_J522WfnahnCpGMojJMqUm");
 
 
-const Contact =()=>{
-  const [companyName, setCompanyName]= useState("")
-  const [name, setName]= useState("")
-  const [email, setEmail]= useState("")
-  const [phone, setPhone]= useState("")
-  const [body, setBody] = useState("")
+export default function ContactUs() {
 
-  function handleSubmit(event){
-      event.preventDefault()
-      emailjs.sendForm("default_service","template_7haep6i","ContactForm")
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_wqqw9kf', 'template_7haep6i', e.target, 'user_J522WfnahnCpGMojJMqUm')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   }
 
 
@@ -44,28 +47,28 @@ const Contact =()=>{
 
         <div id="form">
     
-        <Form id="ContactForm" onSubmit={()=>handleSubmit()}>
+        <Form id="ContactForm" onSubmit={sendEmail}>
             <Form.Group controlId="formBasicEmail">
     <Form.Label>Contact Name</Form.Label>
-    <Form.Control type="text" placeholder="First and Last" onChange={(event)=> setName(event.target.value)} />
+    <Form.Control type="text" placeholder="First and Last" name="name" />
   </Form.Group>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Company Name</Form.Label>
-    <Form.Control type="text" placeholder="If Applicable" onChange={(event)=> setCompanyName(event.target.value)} />
+    <Form.Control type="text" placeholder="If Applicable" name="buisness" />
   </Form.Group>
   <Form.Group controlId="formBasicAddress">
     <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" onChange={(event)=> setEmail(event.target.value)}  />
+    <Form.Control type="email" placeholder="Enter email" name="email"  />
   </Form.Group>
   <Form.Group controlId="formBasicAddress">
     <Form.Label>Phone Number</Form.Label>
-    <Form.Control type="phone" placeholder="Enter Phone" onChange={(event)=> setPhone(event.target.value)}  />
+    <Form.Control type="phone" placeholder="Enter Phone" name="phone"  />
   </Form.Group>
   <Form.Group controlId="formBasicPassword">
     <Form.Label>How can we help</Form.Label>
-    <Form.Control as="textarea" rows={3} onChange={(event)=> setBody(event.target.value)} />
+    <Form.Control as="textarea" rows={3} name="text" />
   </Form.Group>
-  <Button variant="primary" type="submit" class="button">
+  <Button variant="primary" type="submit" className="button">
     Send
   </Button>
 </Form>
@@ -74,4 +77,36 @@ const Contact =()=>{
     )
 }
 
-export default Contact
+// export default Contact
+
+// import React from 'react';
+// import emailjs from 'emailjs-com';
+
+
+
+// export default function ContactUs() {
+
+//   function sendEmail(e) {
+//     e.preventDefault();
+
+//     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+//       .then((result) => {
+//           console.log(result.text);
+//       }, (error) => {
+//           console.log(error.text);
+//       });
+//   }
+
+//   return (
+//     <form className="contact-form" onSubmit={sendEmail}>
+//       <input type="hidden" name="contact_number" />
+//       <label>Name</label>
+//       <input type="text" name="user_name" />
+//       <label>Email</label>
+//       <input type="email" name="user_email" />
+//       <label>Message</label>
+//       <textarea name="message" />
+//       <input type="submit" value="Send" />
+//     </form>
+//   );
+// }

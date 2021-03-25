@@ -21,7 +21,7 @@ const Services=()=>{
                                 <Card.Body>
                                 <Card.Title>Lawn Cutting</Card.Title>
                                 <Card.Text>
-                                Residenial or commercial, flexable mowing options for any type of lawn
+                                Residenial or commercial, flexible mowing options for any type of lawn
                                 </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -46,7 +46,7 @@ const Services=()=>{
                                 <Card.Body>
                                 <Card.Title>Snow Plowing</Card.Title>
                                 <Card.Text>
-                                Living in WNY, you know you should be prepared for anythign that mother nature throws at you. Let us handle the driveway and sidewalk, getting you back on the road faster and easier 
+                                Living in WNY, you know you should be prepared for anything that mother nature throws at you. Let us handle the driveway and sidewalk, getting you back on the road faster and easier 
                                 </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -97,7 +97,7 @@ const Services=()=>{
                                 <Card.Body>
                                 <Card.Title>Bed Installation and Maintenance</Card.Title>
                                 <Card.Text>
-                               Come with your designs, or let us design for you! Also provide matince of existing beds.
+                               Come with your designs, or let us design for you! Also provide maintenance of existing beds.
                                 </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
