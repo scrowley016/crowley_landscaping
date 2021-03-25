@@ -14,7 +14,7 @@ const Home=()=>{
             
             <img src="./pictures/bloom2.gif" className="bloom"></img>
             <br></br>
-            <h1 id="homeText"> At Crowley Landscaping, We Strive for Perfection, and Quality Work is the Most Important Aspect of our Buisness. </h1>
+            <h1 id="homeText"> At Crowley Landscaping, We Strive for Perfection, and Quality Work is the Most Important Aspect of our Business. </h1>
             <br></br>
             <h1 id="homeText"> Making Our Customers Happy Makes Us Happy!</h1>
             
