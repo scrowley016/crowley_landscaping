@@ -26,8 +26,14 @@ const Contact =()=>{
             {/* </div> */}
                 <h1> To Contact Us For a Quote or Questions</h1>
                 <br></br>
-                <Image src="./pictures/email.png" className="icon" fluid />  <a href="mailto:crowleylandscaping716@gmail.com">crowleylandscaping716@gmail.com</a><br></br>
-                <Image src="./pictures/phone.png" className="icon" fluid />  <a href="tel:7164272060">(716) 427-2060</a>
+                <Image src="./pictures/email.png" className="icon" fluid /> 
+                <br></br>
+                 <a href="mailto:crowleylandscaping716@gmail.com">crowleylandscaping716@gmail.com</a>
+                 <br></br>
+                 <br></br>
+                <Image src="./pictures/phone.png" className="icon" fluid /> 
+                <br></br>
+                 <a href="tel:7164272060">(716) 427-2060</a>
                 <br></br>
 
                 <Image src="./pictures/bush.png" className="line"/>
@@ -63,7 +69,6 @@ const Contact =()=>{
     Send
   </Button>
 </Form>
-<Image src="./pictures/grass.png" className="line" fluid />
 </div>
 </div>
     )
